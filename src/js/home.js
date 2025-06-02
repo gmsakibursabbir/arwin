@@ -51,9 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
     '2024-03-22',
   ];
 
-  const calendar = new FullCalendar.Calendar(
-    document.getElementById('calendar'),
-    {
+  document.querySelectorAll('.calendar').forEach((el) => {
+    const calendar = new FullCalendar.Calendar(el, {
       initialView: 'dayGridMonth',
       initialDate: '2024-03-01',
       headerToolbar: {
@@ -66,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
       editable: false,
       showNonCurrentDates: false,
       height: 'auto',
-      events: highlightedDates.map(date => ({
+      events: highlightedDates.map((date) => ({
         start: date,
         display: 'background',
         classNames: ['highlighted'],
@@ -81,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
       },
-    }
-  );
+    });
 
-  calendar.render();
+    calendar.render();
+  });
 });
