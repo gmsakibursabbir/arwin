@@ -203,6 +203,7 @@ new Chart(ctxs, {
 //chart p5 - c3
 
 const ctxss = document.getElementById("keywords").getContext("2d");
+
 new Chart(ctxss, {
   type: "bubble",
   data: {
@@ -210,38 +211,43 @@ new Chart(ctxss, {
       {
         label: "Green Bubbles",
         data: [
-          { x: 20, y: 30, r: 30 }, // Utile (largest)
-          { x: 10, y: 10, r: 15 }, // Dividend (medium)
-          { x: 30, y: 10, r: 15 }, // Brand (medium)
+          { x: 20, y: 30, r: 50 },
+          { x: 10, y: 10, r: 30 },
+          { x: 30, y: 10, r: 30 },
         ],
-        backgroundColor: "#22c55e", // Green
+        backgroundColor: "#22c55e",
         borderColor: "#22c55e",
+        customLabels: ["Utile", "Dividend", "Brand"],
       },
       {
         label: "Red Bubbles",
         data: [
-          { x: 40, y: 40, r: 10 }, // Dazi (small)
-          { x: 50, y: 30, r: 5 }, // FI (smallest)
+          { x: 40, y: 40, r: 25 },
+          { x: 50, y: 30, r: 20 },
         ],
-        backgroundColor: "#ef4444", // Red
+        backgroundColor: "#ef4444",
         borderColor: "#ef4444",
+        customLabels: ["Dazi", "FI"],
       },
     ],
   },
   options: {
     responsive: true,
     plugins: {
-      legend: {
-        display: false,
-      },
+      legend: { display: false },
       tooltip: {
         callbacks: {
           label: function (context) {
-            return context.dataset.label === "Green Bubbles"
-              ? ["Utile", "Dividend", "Brand"][context.dataIndex]
-              : ["Dazi", "FI"][context.dataIndex];
+            return context.dataset.customLabels[context.dataIndex];
           },
         },
+      },
+      bubbleText: {
+        minFontSize: 14,
+        padding: 5,
+        color: '#ffffff',
+        fontFamily: 'sans-serif',
+        fontWeight: 'bold',
       },
     },
     scales: {
@@ -249,7 +255,57 @@ new Chart(ctxss, {
       y: { display: false },
     },
   },
+  plugins: [
+    {
+      id: 'bubbleText',
+      afterDatasetsDraw(chart, args, pluginOptions) {
+        const {
+          ctx,
+          data,
+          scales: { x, y },
+        } = chart;
+
+        const padding = pluginOptions.padding || 5;
+        const minFontSize = pluginOptions.minFontSize || 14;
+
+        ctx.save();
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+
+        data.datasets.forEach((dataset) => {
+          dataset.data.forEach((point, index) => {
+            const xPos = x.getPixelForValue(point.x);
+            const yPos = y.getPixelForValue(point.y);
+            const label = dataset.customLabels?.[index];
+
+            if (label) {
+              // Estimate max font size with padding
+              const maxFontSize = (point.r - padding) * 2 * 0.5;
+              const fontSize = Math.max(minFontSize, Math.min(maxFontSize, point.r));
+
+              ctx.font = `${pluginOptions.fontWeight || 'bold'} ${fontSize}px ${pluginOptions.fontFamily || 'sans-serif'}`;
+              ctx.fillStyle = pluginOptions.color || '#fff';
+
+              // Optional: shrink further if text is wider than bubble
+              const textWidth = ctx.measureText(label).width;
+              const maxTextWidth = (point.r - padding) * 2;
+
+              if (textWidth > maxTextWidth) {
+                const scaledFontSize = fontSize * (maxTextWidth / textWidth);
+                ctx.font = `${pluginOptions.fontWeight || 'bold'} ${scaledFontSize}px ${pluginOptions.fontFamily || 'sans-serif'}`;
+              }
+
+              ctx.fillText(label, xPos, yPos);
+            }
+          });
+        });
+
+        ctx.restore();
+      },
+    },
+  ],
 });
+
 //chart p5 - c4
 const ctxa = document.getElementById("geografica").getContext("2d");
 
