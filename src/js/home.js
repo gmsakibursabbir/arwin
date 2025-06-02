@@ -43,45 +43,4 @@ mobileMenuButton.addEventListener('click', () => {
   mobileMenuContainer.classList.toggle('hidden');
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const highlightedDates = [
-    '2024-03-02',
-    '2024-03-13',
-    '2024-03-18',
-    '2024-03-22',
-  ];
 
-  document.querySelectorAll('.calendar').forEach((el) => {
-    const calendar = new FullCalendar.Calendar(el, {
-      initialView: 'dayGridMonth',
-      initialDate: '2024-03-01',
-      headerToolbar: {
-        left: '',
-        center: 'title',
-        right: 'prev,next',
-      },
-      fixedWeekCount: false,
-      selectable: false,
-      editable: false,
-      showNonCurrentDates: false,
-      height: 'auto',
-      events: highlightedDates.map((date) => ({
-        start: date,
-        display: 'background',
-        classNames: ['highlighted'],
-      })),
-      dayCellDidMount: function (info) {
-        const dateStr = info.date.toISOString().split('T')[0];
-        if (highlightedDates.includes(dateStr)) {
-          const numberEl = info.el.querySelector('.fc-daygrid-day-number');
-          if (numberEl) {
-            numberEl.style.color = '#ffffff';
-            numberEl.style.fontWeight = '700';
-          }
-        }
-      },
-    });
-
-    calendar.render();
-  });
-});

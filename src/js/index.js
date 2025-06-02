@@ -571,3 +571,4 @@ new Chart(ctxownership, {
   },
 });
 //dropdown
+// tab switch

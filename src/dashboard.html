@@ -1285,7 +1285,7 @@
 
                     <!-- Custom Legend -->
                     <div
-                      class="mt-6 grid grid-cols-2 gap-4 justify-start text-sm font-medium"
+                      class="mt-6 grid grid-cols-2 gap-4 justify-start text-sm font-normal"
                     >
                       <div class="flex flex-col space-y-[10px]">
                         <!-- Strategic Holders -->
@@ -1439,7 +1439,7 @@
                 <div
                   class="lg:py-7 pt-7 px-0 lg:px-7 bg-white lg:rounded-[10px] outline-2 outline-offset-[-2px] outline-slate-200 flex flex-col justify-start items-start gap-3"
                 >
-                  <div class="calendar"></div>
+                  <div class="calendarTwo"></div>
                 </div>
               </div>
               <!-- item 2 - 2/3 -->
@@ -2651,7 +2651,7 @@
 
                     <!-- Custom Legend -->
                     <div
-                      class="mt-6 grid grid-cols-2 gap-4 justify-start text-sm font-medium"
+                      class="mt-6 grid grid-cols-2 gap-4 justify-start text-sm font-normal"
                     >
                       <div class="flex flex-col space-y-[10px]">
                         <!-- Partecipazioni strategiche -->
@@ -3664,7 +3664,7 @@
 
                     <!-- Custom Legend -->
                     <div
-                      class="mt-6 grid grid-cols-2 gap-3 justify-start text-sm font-medium"
+                      class="mt-6 grid grid-cols-2 gap-3 justify-start text-sm font-normal"
                     >
                       <!-- uk -->
                       <div
@@ -3915,6 +3915,45 @@
         tab8: "Assistenza e contatti",
       };
 
+      let calendarTwoInstance;
+
+      function initCalendarTwo() {
+        const calendarTwoEl = document.querySelector(".calendarTwo");
+        const highlightedDatesTwo = ["2024-04-05", "2024-04-10", "2024-04-15"];
+
+        calendarTwoInstance = new FullCalendar.Calendar(calendarTwoEl, {
+          initialView: "dayGridMonth",
+          initialDate: "2024-04-01",
+          headerToolbar: {
+            left: "",
+            center: "title",
+            right: "prev,next",
+          },
+          fixedWeekCount: false,
+          selectable: false,
+          editable: false,
+          showNonCurrentDates: false,
+          height: "auto",
+          events: highlightedDatesTwo.map((date) => ({
+            start: date,
+            display: "background",
+            classNames: ["highlighted"],
+          })),
+          dayCellDidMount: function (info) {
+            const dateStr = info.date.toISOString().split("T")[0];
+            if (highlightedDatesTwo.includes(dateStr)) {
+              const numberEl = info.el.querySelector(".fc-daygrid-day-number");
+              if (numberEl) {
+                numberEl.style.color = "#ffffff";
+                numberEl.style.fontWeight = "700";
+              }
+            }
+          },
+        });
+
+        calendarTwoInstance.render();
+      }
+
       document.querySelectorAll(".tab").forEach((tab) => {
         tab.addEventListener("click", () => {
           // Remove active classes
@@ -3937,9 +3976,21 @@
           // Change the <h2> content
           const title = planningTitles[tab.dataset.tab];
           document.getElementById("planning-title").textContent = title;
+
+          // Check and render calendarTwo when switching to tab2
+          if (tab.dataset.tab === "tab2") {
+            setTimeout(() => {
+              if (!calendarTwoInstance) {
+                initCalendarTwo(); // first time init
+              } else {
+                calendarTwoInstance.render(); // if already initialized, just re-render
+              }
+            }, 10); // small delay to ensure the tab is visible
+          }
         });
       });
     </script>
+
     <script>
       // Ensure script runs after DOM is loaded
       document.addEventListener("DOMContentLoaded", () => {
@@ -3994,6 +4045,95 @@
         });
       });
     </script>
+    <script>
+      // calendarOne
+      document.addEventListener("DOMContentLoaded", function () {
+        const highlightedDatesOne = [
+          "2024-03-02",
+          "2024-03-13",
+          "2024-03-18",
+          "2024-03-22",
+        ];
+
+        document.querySelectorAll(".calendar").forEach((el) => {
+          const calendarOne = new FullCalendar.Calendar(el, {
+            initialView: "dayGridMonth",
+            initialDate: "2024-03-01",
+            headerToolbar: {
+              left: "",
+              center: "title",
+              right: "prev,next",
+            },
+            fixedWeekCount: false,
+            selectable: false,
+            editable: false,
+            showNonCurrentDates: false,
+            height: "auto",
+            events: highlightedDatesOne.map((date) => ({
+              start: date,
+              display: "background",
+              classNames: ["highlighted"],
+            })),
+            dayCellDidMount: function (info) {
+              const dateStr = info.date.toISOString().split("T")[0];
+              if (highlightedDatesOne.includes(dateStr)) {
+                const numberEl = info.el.querySelector(
+                  ".fc-daygrid-day-number"
+                );
+                if (numberEl) {
+                  numberEl.style.color = "#ffffff";
+                  numberEl.style.fontWeight = "700";
+                }
+              }
+            },
+          });
+
+          calendarOne.render();
+        });
+      });
+
+      // calendarTwo
+      document.addEventListener("DOMContentLoaded", function () {
+        const highlightedDatesTwo = ["2024-04-05", "2024-04-10", "2024-04-15"];
+
+        document.querySelectorAll(".calendarTwo").forEach((el) => {
+          const calendarTwo = new FullCalendar.Calendar(el, {
+            initialView: "dayGridMonth",
+            initialDate: "2024-04-01",
+            headerToolbar: {
+              left: "",
+              center: "title",
+              right: "prev,next",
+            },
+            fixedWeekCount: false,
+            selectable: false,
+            editable: false,
+            showNonCurrentDates: false,
+            height: "auto",
+            events: highlightedDatesTwo.map((date) => ({
+              start: date,
+              display: "background",
+              classNames: ["highlighted"],
+            })),
+            dayCellDidMount: function (info) {
+              const dateStr = info.date.toISOString().split("T")[0];
+              if (highlightedDatesTwo.includes(dateStr)) {
+                const numberEl = info.el.querySelector(
+                  ".fc-daygrid-day-number"
+                );
+                if (numberEl) {
+                  numberEl.style.color = "#ffffff";
+                  numberEl.style.fontWeight = "700";
+                }
+              }
+            },
+          });
+
+          calendarTwo.render();
+        });
+      });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
     <script src="./js/index.js" type="module"></script>
     <script src="./js/home.js" type="module"></script>
