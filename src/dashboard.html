@@ -35,10 +35,10 @@
   </head>
 
   <body class="!bg-cst-peel font-inter">
-    <header class="bg-white lg:hidden block">
+    <header class="bg-white xl:hidden block">
       <div class="w-full flex items-center justify-between py-4 px-5">
         <div class="flex items-center gap-x-5">
-          <a class="text-cst-blue lg:hidden inline-block" id="menu-toggle"
+          <a class="text-cst-blue xl:hidden inline-block" id="menu-toggle"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -55,21 +55,21 @@
               <path d="M4 18h16" />
               <path d="M4 6h16" /></svg
           ></a>
-          <a href="./index.html" class="max-w-[160px]"
+          <a href="./index.html" class="max-w-[160px] lg:max-w-[220px]"
             ><img src="./img/logo-arwin-nuovo.png" alt=""
           /></a>
         </div>
 
-        <div class="relative lg:hidden inline-block notification-wrapper">
+        <div class="relative xl:hidden inline-block notification-wrapper">
           <!-- Notification Button -->
           <button
-            class="notification-btn text-cst-green transition-colors duration-300 p-3 lg:p-5 text-base rounded-[10px] border-[2px] border-cst-peeler bg-white flex flex-row items-center gap-x-3 lg:gap-x-4 hover:bg-[#045e7018] relative cursor-pointer"
+            class="notification-btn text-cst-green transition-colors duration-300 p-3 2xl:p-5 text-base rounded-[10px] border-[2px] border-cst-peeler bg-white flex flex-row items-center gap-x-3 2xl:gap-x-4 hover:bg-[#045e7018] relative cursor-pointer"
             aria-expanded="false"
           >
             <img
               src="./img/icons/notification.svg"
               alt="Notification"
-              class="max-w-5 max-h-5"
+              class="max-w-5 max-h-5 xl:max-w-7 xl:max-h-7"
             />
             <div
               class="badge bg-cst-blue badge-xs absolute top-2 right-2"
@@ -103,14 +103,14 @@
     <section class="gap-x-4 flex h-screen" id="dashboard-container bg-cst-peel">
       <!-- Left Sidebar -->
       <div
-        class="lg:w-[250px] 2xl:w-[350px] bg-white p-4 2xl:py-8 2xl:px-6 lg:flex flex-col justify-between space-y-4 h-full transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] hidden"
+        class="xl:w-[250px] 2xl:w-[350px] bg-white p-4 2xl:py-8 2xl:px-6 xl:flex flex-col justify-between space-y-4 h-full transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] hidden"
         id="menus-left"
       >
-        <a href="./index.html" class="max-w-[302px] lg:inline-block hidden">
+        <a href="./index.html" class="max-w-[302px] xl:inline-block hidden">
           <img src="./img/logo-arwin-nuovo.png" alt="Arwin Logo" />
         </a>
-        <nav class="mt-[40px] lg:mt-[75px]">
-          <ul class="flex flex-col space-y-2 lg:space-y-4">
+        <nav class="mt-[40px] xl:mt-[75px]">
+          <ul class="flex flex-col space-y-2 xl:space-y-4">
             <li>
               <div class="tab tab-active" data-tab="tab1">
                 <div class="w-6 h-6">
@@ -453,47 +453,59 @@
       <div class="flex-1 overflow-auto">
         <!-- Header -->
         <div
-          class="flex flex-col 2xl:flex-row justify-between items-start 2xl:items-center space-y-4 px-5 pt-7 2xl:pt-10 2xl:px-20 pb-5"
+          class="flex flex-col md:flex-row justify-between items-start 2xl:items-center space-y-4 px-5 pt-7 2xl:pt-10 2xl:px-20 pb-5"
         >
           <h2
             id="planning-title"
-            class="text-2xl lg:text-4xl font-semibold text-cst-green"
+            class="text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-cst-green min-w-[24%]"
           >
             Ciao, Antonio!
           </h2>
 
           <div
-            class="flex flex-row space-x-3 lg:space-x-4 overflow-x-scroll 2xl:overflow-x-hidden w-full 2xl:w-auto hide-scrollbar"
+            class="flex flex-row md:justify-end space-x-3 2xl:space-x-4 overflow-x-scroll 2xl:overflow-x-hidden w-full 2xl:w-auto hide-scrollbar"
           >
             <a
               href="#"
-              class="text-cst-green transition-colors duration-300 py-2 px-3 lg:p-5 text-base rounded-[10px] border-[2px] border-cst-peeler bg-white flex flex-row items-center gap-x-3 lg:gap-x-4 hover:bg-[#045e7018] flex-nowrap min-w-fit"
+              class="text-cst-green transition-colors duration-300 py-2 px-3 2xl:p-5 text-base rounded-[10px] border-[2px] border-cst-peeler bg-white flex flex-row items-center gap-x-3 2xl:gap-x-4 hover:bg-[#045e7018] flex-nowrap min-w-fit"
               >LinkedIn
-              <img src="./img/icons/share.svg" alt="" class="max-w-5 max-h-5"
+              <img
+                src="./img/icons/share.svg"
+                alt=""
+                class="max-w-4 max-h-4 2xl:max-w-5 2xl:max-h-5"
             /></a>
             <a
               href="#"
-              class="text-cst-green transition-colors duration-300 py-2 px-3 lg:p-5 text-base rounded-[10px] border-[2px] border-cst-peeler bg-white flex flex-row items-center gap-x-3 lg:gap-x-4 hover:bg-[#045e7018] flex-nowrap min-w-fit"
+              class="text-cst-green transition-colors duration-300 py-2 px-3 2xl:p-5 text-base rounded-[10px] border-[2px] border-cst-peeler bg-white flex flex-row items-center gap-x-3 2xl:gap-x-4 hover:bg-[#045e7018] flex-nowrap min-w-fit"
               >Sole24
-              <img src="./img/icons/share.svg" alt="" class="max-w-5 max-h-5"
+              <img
+                src="./img/icons/share.svg"
+                alt=""
+                class="max-w-4 max-h-4 2xl:max-w-5 2xl:max-h-5"
             /></a>
             <a
               href="#"
-              class="text-cst-green transition-colors duration-300 py-2 px-3 lg:p-5 text-base rounded-[10px] border-[2px] border-cst-peeler bg-white flex flex-row items-center gap-x-3 lg:gap-x-4 hover:bg-[#045e7018] flex-nowrap min-w-fit"
+              class="text-cst-green transition-colors duration-300 py-2 px-3 2xl:p-5 text-base rounded-[10px] border-[2px] border-cst-peeler bg-white flex flex-row items-center gap-x-3 2xl:gap-x-4 hover:bg-[#045e7018] flex-nowrap min-w-fit"
               >Milano Finanza
-              <img src="./img/icons/share.svg" alt="" class="max-w-5 max-h-5"
+              <img
+                src="./img/icons/share.svg"
+                alt=""
+                class="max-w-4 max-h-4 2xl:max-w-5 2xl:max-h-5"
             /></a>
             <a
               href="#"
-              class="text-cst-green transition-colors duration-300 py-2 px-3 lg:p-5 text-base rounded-[10px] border-[2px] border-cst-peeler bg-white flex flex-row items-center gap-x-3 lg:gap-x-4 hover:bg-[#045e7018] flex-nowrap min-w-fit"
+              class="text-cst-green transition-colors duration-300 py-2 px-3 2xl:p-5 text-base rounded-[10px] border-[2px] border-cst-peeler bg-white flex flex-row items-center gap-x-3 2xl:gap-x-4 hover:bg-[#045e7018] flex-nowrap min-w-fit"
               >Financial Times
-              <img src="./img/icons/share.svg" alt="" class="max-w-5 max-h-5"
+              <img
+                src="./img/icons/share.svg"
+                alt=""
+                class="max-w-4 max-h-4 2xl:max-w-5 2xl:max-h-5"
             /></a>
             <!-- Notification Button Wrapper -->
-            <div class="relative lg:inline-block hidden notification-wrapper">
+            <div class="relative xl:inline-block hidden notification-wrapper">
               <!-- Notification Button -->
               <button
-                class="notification-btn text-cst-green transition-colors duration-300 p-3 lg:p-5 text-base rounded-[10px] border-[2px] border-cst-peeler bg-white flex items-center gap-x-3 hover:bg-[#045e7018] relative cursor-pointer"
+                class="notification-btn text-cst-green transition-colors duration-300 p-3 3xl:p-5 text-base rounded-[10px] border-[2px] border-cst-peeler bg-white flex items-center gap-x-3 hover:bg-[#045e7018] relative cursor-pointer"
                 aria-expanded="false"
               >
                 <img
@@ -502,13 +514,13 @@
                   class="max-w-7 max-h-7"
                 />
                 <div
-                  class="absolute top-5 right-5 w-2.5 h-2.5 bg-cst-blue rounded-full"
+                  class="absolute top-4 right-4 2xl:top-5 2xl:right-5 w-2.5 h-2.5 bg-cst-blue rounded-full"
                 ></div>
               </button>
 
               <!-- Dropdown Panel (Initially Hidden) -->
               <div
-                class="notification-dropdown fixed -ml-[180px] 2xl:right-24 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50"
+                class="notification-dropdown fixed -ml-[180px] xl:-ml-[200px] 2xl:right-24 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50"
               >
                 <ul class="divide-y divide-gray-100 text-sm">
                   <li class="p-4 hover:bg-gray-50 cursor-pointer">
@@ -549,7 +561,7 @@
               <!-- item 2 - 1/2 tab -->
               <div class="flex flex-col col-span-12 md:col-span-7 relative">
                 <button
-                  class="p-[8px] lg:p-[20px] bg-cst-blue rounded-[10px] absolute top-4 right-5 lg:top-[30px] lg:right-[30px] inline-block cursor-pointer transition-all duration-300"
+                  class="p-[8px] 2xl:p-[20px] bg-cst-blue rounded-[10px] absolute top-4 right-5 lg:top-[30px] lg:right-[30px] inline-block cursor-pointer transition-all duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -650,18 +662,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -670,7 +682,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -681,7 +693,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -702,18 +714,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -722,7 +734,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -733,7 +745,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -754,18 +766,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -774,7 +786,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -785,7 +797,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -804,18 +816,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Carlos Méndez
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -824,7 +836,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Operational KPIs – Q3 Recap
                           </h4>
@@ -835,7 +847,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -858,18 +870,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -878,7 +890,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -889,7 +901,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -910,18 +922,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -930,7 +942,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -941,7 +953,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -962,18 +974,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -982,7 +994,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -993,7 +1005,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -1012,18 +1024,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Carlos Méndez
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -1032,7 +1044,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Operational KPIs – Q3 Recap
                           </h4>
@@ -1043,7 +1055,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -1066,18 +1078,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -1086,7 +1098,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -1097,7 +1109,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -1118,18 +1130,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -1138,7 +1150,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -1149,7 +1161,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -1170,18 +1182,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -1190,7 +1202,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -1201,7 +1213,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -1220,18 +1232,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Carlos Méndez
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -1240,7 +1252,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Operational KPIs – Q3 Recap
                           </h4>
@@ -1251,7 +1263,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -1432,7 +1444,7 @@
           <div id="tab2" class="tab-content">
             <!-- rest content -->
             <div
-              class="w-full md:mt-[32px] grid grid-cols-12 gap-6 md:gap-7 lg:gap-[38px]"
+              class="w-full md:mt-[32px] grid grid-cols-12 gap-6 md:gap-7 2xl:gap-[38px]"
             >
               <!-- item 1 - 3/3 -->
               <div class="flex flex-col col-span-12 md:col-span-5">
@@ -1465,7 +1477,9 @@
                     <div
                       class="flex flex-row items-center justify-between space-x-2"
                     >
-                      <h4 class="text-lg font-semibold text-[#045E70]">
+                      <h4
+                        class="text-base 2xl:text-lg font-semibold text-[#045E70]"
+                      >
                         Giulia Ferretti – lavora per Amber Oak Capital
                       </h4>
                       <span class="text-sm text-[#01B0F1]"
@@ -1485,7 +1499,9 @@
                     <div
                       class="flex flex-row items-center justify-between space-x-2"
                     >
-                      <h4 class="text-lg font-semibold text-[#045E70]">
+                      <h4
+                        class="text-base 2xl:text-lg font-semibold text-[#045E70]"
+                      >
                         Giulia Ferretti – lavora per Amber Oak Capital
                       </h4>
                       <span class="text-sm text-[#159BB6]"
@@ -1505,7 +1521,9 @@
                     <div
                       class="flex flex-row items-center justify-between space-x-2"
                     >
-                      <h4 class="text-lg font-semibold text-[#461BBB]">
+                      <h4
+                        class="text-base 2xl:text-lg font-semibold text-[#461BBB]"
+                      >
                         Giulia Ferretti – lavora per Amber Oak Capital
                       </h4>
                       <span class="text-sm text-[#714ADA]"
@@ -1526,7 +1544,7 @@
                 class="overflow-x-scroll lg:overflow-x-auto col-span-12 hide-scrollbar md:mt-[22px]"
               >
                 <table
-                  class="min-w-[900px] lg:min-w-full table-auto border-collapse rounded-lg overflow-hidden font-semibold"
+                  class="min-w-[900px] lg:min-w-full table-auto border-collapse rounded-lg overflow-hidden font-semibold text-sm 2xl:text-base"
                 >
                   <thead class="bg-cst-green text-white">
                     <tr>
@@ -1583,7 +1601,7 @@
           <div id="tab3" class="tab-content">
             <!-- rest content -->
             <div
-              class="w-full md:mt-[32px] grid grid-cols-12 gap-6 md:gap-9 xl:gap-[60px]"
+              class="w-full md:mt-[32px] grid grid-cols-12 gap-6 md:gap-9 2xl:gap-[60px]"
             >
               <!-- item 1 - 1/2 tab -->
               <div class="flex flex-col col-span-12 xl:col-span-5 tab-wrapper">
@@ -1645,18 +1663,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -1665,7 +1683,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -1676,7 +1694,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -1697,18 +1715,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -1717,7 +1735,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -1728,7 +1746,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -1749,18 +1767,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -1769,7 +1787,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -1780,7 +1798,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -1799,18 +1817,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Carlos Méndez
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -1819,7 +1837,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Operational KPIs – Q3 Recap
                           </h4>
@@ -1830,7 +1848,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -1853,18 +1871,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -1873,7 +1891,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -1884,7 +1902,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -1905,18 +1923,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -1925,7 +1943,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -1936,7 +1954,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -1957,18 +1975,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -1977,7 +1995,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -1988,7 +2006,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -2007,18 +2025,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Carlos Méndez
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -2027,7 +2045,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Operational KPIs – Q3 Recap
                           </h4>
@@ -2038,7 +2056,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -2061,18 +2079,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -2081,7 +2099,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -2092,7 +2110,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -2113,18 +2131,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -2133,7 +2151,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -2144,7 +2162,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -2165,18 +2183,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Marco Bellini
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -2185,7 +2203,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Q3 Dashboard Summary
                           </h4>
@@ -2196,7 +2214,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -2215,18 +2233,18 @@
                       </div>
                       <!-- content -->
                       <div
-                        class="flex flex-col justify-between w-full gap-y-[10px]"
+                        class="flex flex-col justify-between w-full gap-y-[5px] 2xl:gap-y-[10px]"
                       >
                         <!-- i1 -->
                         <div
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h5
-                            class="text-sm md:text-base font-medium text-cst-green"
+                            class="text-sm 2xl:text-base font-medium text-cst-green"
                           >
                             Carlos Méndez
                           </h5>
-                          <span class="text-sm md:text-base text-[#A8A8A8]"
+                          <span class="text-sm 2xl:text-base text-[#A8A8A8]"
                             >10:45</span
                           >
                         </div>
@@ -2235,7 +2253,7 @@
                           class="flex flex-row justify-between items-center gap-x-1"
                         >
                           <h4
-                            class="text-base md:text-lg font-semibold text-black"
+                            class="text-base 2xl:text-lg font-semibold text-black"
                           >
                             Operational KPIs – Q3 Recap
                           </h4>
@@ -2246,7 +2264,7 @@
                         </div>
                         <!-- i3 -->
                         <p
-                          class="text-sm md:text-base text-[#8C9DA0] font-medium mr-3"
+                          class="text-sm 2xl:text-base text-[#8C9DA0] font-medium mr-3"
                         >
                           Hi Antonio, please find below the key points discussed
                           and next steps we agreed on…
@@ -2261,7 +2279,7 @@
                 class="flex flex-col col-span-12 xl:col-span-7 gap-y-4 lg:gap-y-[30px]"
               >
                 <button
-                  class="p-5 lg:py-[30px] lg:px-[40px] flex flex-row items-center justify-center gap-x-5 bg-white border-[2px] border-cst-blue rounded-[10px] text-base lg:text-2xl font-semibold text-cst-green cursor-pointer hover:bg-cst-blue/10 transition-colors duration-300"
+                  class="p-5 2xl:py-[30px] 2xl:px-[40px] flex flex-row items-center justify-center gap-x-5 bg-white border-[2px] border-cst-blue rounded-[10px] text-base 2xl:text-2xl font-semibold text-cst-green cursor-pointer hover:bg-cst-blue/10 transition-colors duration-300"
                 >
                   E-Market Storage (SDIR)
                   <img src="./img/icons/share.svg" alt="arrow " />
@@ -2282,7 +2300,7 @@
                     class="p-6 2xl:p-[30px] bg-white border-[2px] border-cst-peeler rounded-b-[10px] rounded-x-[10px] md:min-h-[290px] lg:min-h-[300px] xl:min-h-[380px] overflow-x-scroll hide-scrollbar"
                   >
                     <table
-                      class="min-w-[900px] lg:min-w-full table-auto border-collapse overflow-hidden"
+                      class="min-w-[900px] lg:min-w-full table-auto border-collapse overflow-hidden text-sm 2xl:text-base"
                     >
                       <tbody class="bg-white">
                         <tr class="">
@@ -2310,7 +2328,7 @@
                             </div>
                           </td>
                           <td
-                            class="text-cst-green text-lg font-semibold pb-[20px] px-[10px]"
+                            class="text-cst-green text-base 2xl:text-lg font-semibold pb-[20px] px-[10px]"
                           >
                             FY 2024 Results
                           </td>
@@ -2357,7 +2375,7 @@
                             </div>
                           </td>
                           <td
-                            class="text-cst-green text-lg font-semibold pb-[20px] px-[10px]"
+                            class="text-cst-green text-base 2xl:text-lg font-semibold pb-[20px] px-[10px]"
                           >
                             FY 2024 results Press release
                           </td>
@@ -2404,7 +2422,7 @@
                             </div>
                           </td>
                           <td
-                            class="text-cst-green text-lg font-semibold pb-[20px] px-[10px]"
+                            class="text-cst-green text-base 2xl:text-lg font-semibold pb-[20px] px-[10px]"
                           >
                             Investor Presentation - November 2024
                           </td>
@@ -2451,7 +2469,7 @@
                             </div>
                           </td>
                           <td
-                            class="text-cst-green text-lg font-semibold pb-[20px] px-[10px]"
+                            class="text-cst-green text-base 2xl:text-lg font-semibold pb-[20px] px-[10px]"
                           >
                             M&A Transaction Notice
                           </td>
@@ -2498,7 +2516,7 @@
                             </div>
                           </td>
                           <td
-                            class="text-cst-green text-lg font-semibold pb-[20px] px-[10px]"
+                            class="text-cst-green text-base 2xl:text-lg font-semibold pb-[20px] px-[10px]"
                           >
                             Nine-Month Results 2024
                           </td>
@@ -2545,7 +2563,7 @@
                             </div>
                           </td>
                           <td
-                            class="text-cst-green text-lg font-semibold pb-[20px] px-[10px]"
+                            class="text-cst-green text-base 2xl:text-lg font-semibold pb-[20px] px-[10px]"
                           >
                             9M 2024 Financial Results Presentation
                           </td>
@@ -2592,7 +2610,7 @@
                             </div>
                           </td>
                           <td
-                            class="text-cst-green text-lg font-semibold pb-[20px] px-[10px]"
+                            class="text-cst-green text-base 2xl:text-lg font-semibold pb-[20px] px-[10px]"
                           >
                             Appointment of New Board Member
                           </td>
@@ -2625,7 +2643,7 @@
           <div id="tab4" class="tab-content">
             <!-- rest content -->
             <div
-              class="w-full md:mt-[32px] grid grid-cols-12 gap-6 md:gap-7 lg:gap-[38px]"
+              class="w-full md:mt-[32px] grid grid-cols-12 gap-6 md:gap-7 2xl:gap-[38px]"
             >
               <!-- item 1 - 1/2 -->
               <div class="flex flex-col col-span-12 md:col-span-5">
@@ -2722,7 +2740,7 @@
                 class="overflow-x-scroll lg:overflow-x-auto col-span-12 md:col-span-7 hide-scrollbar"
               >
                 <table
-                  class="min-w-[900px] lg:min-w-full table-auto border-collapse rounded-lg overflow-hidden font-semibold"
+                  class="min-w-[900px] lg:min-w-full table-auto border-collapse rounded-lg overflow-hidden font-semibold text-sm 2xl:text-base"
                 >
                   <thead class="bg-cst-green text-white">
                     <tr>
@@ -2792,7 +2810,7 @@
                 class="overflow-x-scroll lg:overflow-x-auto col-span-12 hide-scrollbar lg:mb-[22px]"
               >
                 <table
-                  class="min-w-[900px] lg:min-w-full table-auto border-collapse rounded-lg overflow-hidden font-semibold"
+                  class="min-w-[900px] lg:min-w-full table-auto border-collapse rounded-lg overflow-hidden font-semibold text-sm 2xl:text-base"
                 >
                   <thead class="bg-cst-green text-white">
                     <tr>
@@ -2882,7 +2900,7 @@
                     <!-- 1 -->
                     <div class="text-center">
                       <h4
-                        class="text-lg lg:text-xl text-cst-green font-semibold mb-[10px]"
+                        class="text-lg 2xl:text-xl text-cst-green font-semibold mb-[10px]"
                       >
                         Black Rock Global Funds
                       </h4>
@@ -2894,7 +2912,7 @@
                     <!-- 2 -->
                     <div>
                       <h4
-                        class="text-base lg:text-lg text-cst-green font-semibold mt-6 md:mt-10 mb-4"
+                        class="text-base 2xl:text-lg text-cst-green font-semibold mt-6 md:mt-10 mb-4"
                       >
                         Info
                       </h4>
@@ -2923,7 +2941,7 @@
                               </svg>
                             </div>
                             <span
-                              class="text-base text-cst-green font-semibold md:min-w-[146px]"
+                              class="text-sm 2xl:text-base text-cst-green font-semibold md:min-w-[146px]"
                               >Portfolio Manager</span
                             >
                           </div>
@@ -2994,7 +3012,7 @@
                     <!-- 3 -->
                     <div class="mb-9 md:mb-10.5 mt-8 md:mt-9.5">
                       <h5
-                        class="text-lg font-semibold text-cst-green text-center"
+                        class="text-base 2xl:text-lg font-semibold text-cst-green text-center"
                       >
                         Stile di investimento
                       </h5>
@@ -3013,7 +3031,7 @@
                     </div>
                     <!-- 4 -->
                     <button
-                      class="inline-block w-auto bg-cst-blue px-10 py-[10px] text-base lg:text-lg rounded-[10px] text-white cursor-pointer font-semibold transition-colors duration-300 hover:bg-cst-blue-hover hover:bg-cst-green"
+                      class="inline-block w-auto bg-cst-blue px-10 py-[10px] text-base 2xl:text-lg rounded-[10px] text-white cursor-pointer font-semibold transition-colors duration-300 hover:bg-cst-blue-hover hover:bg-cst-green"
                     >
                       Altro
                     </button>
@@ -3025,7 +3043,7 @@
                     <!-- 1 -->
                     <div class="text-center">
                       <h4
-                        class="text-lg lg:text-xl text-cst-green font-semibold mb-[10px]"
+                        class="text-lg 2xl:text-xl text-cst-green font-semibold mb-[10px]"
                       >
                         Black Rock Global Funds
                       </h4>
@@ -3037,7 +3055,7 @@
                     <!-- 2 -->
                     <div>
                       <h4
-                        class="text-base lg:text-lg text-cst-green font-semibold mt-6 md:mt-10 mb-4"
+                        class="text-base 2xl:text-lg text-cst-green font-semibold mt-6 md:mt-10 mb-4"
                       >
                         Info
                       </h4>
@@ -3137,7 +3155,7 @@
                     <!-- 3 -->
                     <div class="mb-9 md:mb-10.5 mt-8 md:mt-9.5">
                       <h5
-                        class="text-lg font-semibold text-cst-green text-center"
+                        class="text-base 2xl:text-lg font-semibold text-cst-green text-center"
                       >
                         Stile di investimento
                       </h5>
@@ -3156,7 +3174,7 @@
                     </div>
                     <!-- 4 -->
                     <button
-                      class="inline-block w-auto bg-cst-blue px-10 py-[10px] text-base lg:text-lg rounded-[10px] text-white cursor-pointer font-semibold transition-colors duration-300 hover:bg-cst-blue-hover hover:bg-cst-green"
+                      class="inline-block w-auto bg-cst-blue px-10 py-[10px] text-base 2xl:text-lg rounded-[10px] text-white cursor-pointer font-semibold transition-colors duration-300 hover:bg-cst-blue-hover hover:bg-cst-green"
                     >
                       See more
                     </button>
@@ -3169,14 +3187,14 @@
           <div id="tab5" class="tab-content">
             <!-- rest content -->
             <div
-              class="w-full md:mt-[32px] grid grid-cols-12 gap-6 md:gap-7 lg:gap-[38px]"
+              class="w-full md:mt-[32px] grid grid-cols-12 gap-6 md:gap-7 2xl:gap-[38px]"
             >
               <!-- item 1 -3/3 -->
               <div
                 class="overflow-x-scroll lg:overflow-x-auto col-span-12 hide-scrollbar lg:mb-[22px]"
               >
                 <table
-                  class="min-w-[500px] lg:min-w-full table-auto border-collapse rounded-lg overflow-hidden font-semibold"
+                  class="min-w-[500px] lg:min-w-full table-auto border-collapse rounded-lg overflow-hidden font-semibold text-sm 2xl:text-base"
                 >
                   <thead class="bg-cst-green text-white">
                     <tr>
@@ -3263,7 +3281,7 @@
                 class="overflow-x-scroll lg:overflow-x-auto col-span-12 hide-scrollbar lg:mb-[22px]"
               >
                 <table
-                  class="min-w-[900px] lg:min-w-full table-auto border-collapse rounded-lg overflow-hidden font-semibold"
+                  class="min-w-[900px] lg:min-w-full table-auto border-collapse rounded-lg overflow-hidden font-semibold text-sm 2xl:text-base"
                 >
                   <thead class="bg-cst-green text-white">
                     <tr>
@@ -3478,7 +3496,7 @@
           <div id="tab6" class="tab-content">
             <!-- rest content -->
             <div
-              class="w-full md:mt-[32px] grid grid-cols-12 gap-6 md:gap-7 lg:gap-[38px]"
+              class="w-full md:mt-[32px] grid grid-cols-12 gap-6 md:gap-7 2xl:gap-[38px]"
             >
               <!-- item 1 - 3/3 -->
               <div class="flex flex-col col-span-12 md:col-span-7">
@@ -3527,25 +3545,28 @@
                   </div>
                   <!-- Chart container -->
                   <div
-                    class="relative w-full max-w-[428px] flex justify-center items-center 2xl:-mt-20 md:mt-12"
+                    class="relative w-full max-w-[350px] 2xl:max-w-[428px] flex justify-center items-center 2xl:-mt-20 md:mt-12"
                   >
-                    <canvas id="sentimentChart" class="w-full"></canvas>
+                    <canvas
+                      id="sentimentChart"
+                      class="w-full max-h-[320px]"
+                    ></canvas>
 
                     <!-- Center text overlay -->
                     <div
                       class="absolute inset-0 flex flex-col items-center justify-center bottom-0 left-0 right-0 top-30 xl:top-50"
                     >
                       <div
-                        class="inline-flex justify-center items-center min-w-[64px] min-h-[64px] 2xl:min-w-[120px] 2xl:min-h-[120px] rounded-full bg-white shadow-lg"
+                        class="inline-flex justify-center items-center min-w-[64px] min-h-[64px] xl:min-w-[80px] xl:min-h-[80px] 2xl:min-w-[120px] 2xl:min-h-[120px] rounded-full bg-white shadow-lg"
                       >
                         <img
                           src="./img/chart-clock.png"
                           alt="Sentiment Icon"
-                          class="w-6 h-6 xl:w-13 xl:h-13"
+                          class="w-6 h-6 2xl:w-13 2xl:h-13"
                         />
                       </div>
                       <p
-                        class="text-cst-greener font-semibold text-sm lg:text-2xl mt-5"
+                        class="text-cst-greener font-semibold text-sm 2:text-2xl mt-5"
                       >
                         Positivo
                       </p>
@@ -3635,8 +3656,8 @@
                 <div
                   class="p-6 2xl:p-10 bg-white border-[2px] border-cst-peeler rounded-b-[10px] rounded-x-[10px] md:min-h-[290px] lg:min-h-[330px] xl:min-h-[420px] flex items-center justify-center"
                 >
-                  <div class="w-100 h-100 mx-auto relative mt-3">
-                    <canvas id="keywords"></canvas>
+                  <div class="w-100 h-80 mx-auto relative">
+                    <canvas class="mt-3" id="keywords"></canvas>
                   </div>
                 </div>
               </div>
@@ -3717,7 +3738,7 @@
                 class="overflow-x-scroll lg:overflow-x-auto col-span-12 hide-scrollbar mt-[38px]"
               >
                 <table
-                  class="min-w-[900px] lg:min-w-full table-auto border-collapse rounded-lg overflow-hidden font-semibold"
+                  class="min-w-[900px] lg:min-w-full table-auto border-collapse rounded-lg overflow-hidden font-semibold text-sm 2xl:text-base"
                 >
                   <thead class="bg-cst-green text-white">
                     <tr>
@@ -3762,7 +3783,7 @@
           <!-- Tab 7 -->
           <div id="tab7" class="tab-content">
             <!-- rest content -->
-            <div class="w-full md:mt-[32px]">
+            <div class="w-full 2xl:mt-[32px]">
               <div class="flex flex-col">
                 <!-- top -->
                 <div
@@ -3837,7 +3858,7 @@
           <!-- Tab 8 -->
           <div id="tab8" class="tab-content">
             <!-- rest content -->
-            <div class="w-full md:mt-[32px]">
+            <div class="w-full 2xl:mt-[32px]">
               <div
                 class="flex flex-col justify-center items-center text-center bg-white border-[2px] border-cst-peeler rounded-[10px] px-[30px] py-[50px]"
               >
@@ -3848,12 +3869,12 @@
                   class="flex flex-col space-y-3 lg:space-y-4 mt-5 mb-8 lg:mt-[30px] lg:mb-[50px]"
                 >
                   <h3
-                    class="text-xl lg:text-2xl 2xl:text-[30px] font-medium text-cst-green"
+                    class="text-lg xl:text-2xl 2xl:text-[30px] font-medium text-cst-green"
                   >
                     Apertura Ticket Assistenza IT Codia
                   </h3>
                   <h4
-                    class="text-lg lg:text-xl 2xl:text-[26px] font-medium text-cst-gray-light"
+                    class="text-base xl:text-lg 2xl:text-[26px] font-medium text-cst-gray-light"
                   >
                     Hai riscontrato malfunzionamenti della piattaforma?
                   </h4>
@@ -3878,12 +3899,12 @@
                   class="flex flex-col space-y-3 lg:space-y-4 mt-5 mb-8 lg:mt-[30px] lg:mb-[50px]"
                 >
                   <h3
-                    class="text-xl lg:text-2xl 2xl:text-[30px] font-medium text-cst-green"
+                    class="text-lg lg:text-2xl 2xl:text-[30px] font-medium text-cst-green"
                   >
                     Contatti Arwin per consulenza IR
                   </h3>
                   <h4
-                    class="text-lg lg:text-xl 2xl:text-[26px] font-medium text-cst-gray-light"
+                    class="text-base xl:text-lg 2xl:text-[26px] font-medium text-cst-gray-light"
                   >
                     Hai domande sui contenuti e il funzionamento della
                     piattaforma?

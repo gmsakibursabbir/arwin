@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-
   --screen-xsm: 370px;
   --screen-sm: 480px;
   --screen-md: 768px;
@@ -89,7 +88,14 @@
   height: 14px;
   margin-right: 0.5rem;
   transform: rotate(30deg); /* For hexagon shape */
-  clip-path: polygon(50% 0%, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%); /* Hexagon clip-path */
+  clip-path: polygon(
+    50% 0%,
+    90% 25%,
+    90% 75%,
+    50% 100%,
+    10% 75%,
+    10% 25%
+  ); /* Hexagon clip-path */
 }
 
 .active-tab {
@@ -137,7 +143,7 @@ body {
   color: var(--color-primary);
 }
 .bg-schedule {
-  background-image: url('../img/schedule.png');
+  background-image: url("../img/schedule.png");
 }
 .fc .fc-daygrid-day.fc-day-today {
   background-color: transparent !important;
@@ -185,8 +191,18 @@ body {
   padding-top: 2px;
 }
 
+@media screen and (max-width: 1440px) {
+  .fc .fc-toolbar-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .fc .fc-daygrid-day-frame {
     height: 42px;
+  }
+  .fc .fc-toolbar-title {
+    font-weight: 600;
+    font-size: 1.1rem;
   }
 }
