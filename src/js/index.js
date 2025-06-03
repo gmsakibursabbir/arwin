@@ -211,9 +211,9 @@ new Chart(ctxss, {
       {
         label: "Green Bubbles",
         data: [
-          { x: 20, y: 30, r: 50 },
-          { x: 10, y: 10, r: 30 },
-          { x: 30, y: 10, r: 30 },
+          { x: 25, y: 30, r: 50 },
+          { x: 10, y: 15, r: 30 },
+          { x: 40, y: 10, r: 30 },
         ],
         backgroundColor: "#22c55e",
         borderColor: "#22c55e",

@@ -196,6 +196,9 @@ body {
     font-weight: 600;
     font-size: 1.2rem;
   }
+  .fc .fc-daygrid-day-frame {
+    height: 48px;
+  }
 }
 @media screen and (max-width: 768px) {
   .fc .fc-daygrid-day-frame {
