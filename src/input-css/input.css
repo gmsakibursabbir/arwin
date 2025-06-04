@@ -32,7 +32,7 @@
 }
 
 .tab {
-  @apply p-2 lg:px-4.5 lg:py-2.5 w-full lg:space-x-3 2xl:space-x-5 flex items-center justify-center lg:justify-start mr-auto cursor-pointer transition-all duration-300 ease-in-out rounded-[10px] font-medium text-sm 2xl:text-lg hover:bg-cst-blue hover:text-white;
+  @apply p-2 lg:px-4.5 lg:py-2.5 w-full lg:space-x-3 2xl:space-x-4 flex items-center justify-center lg:justify-start mr-auto cursor-pointer transition-all duration-300 ease-in-out rounded-[10px] font-medium text-sm 2xl:text-lg hover:bg-cst-blue hover:text-white;
 }
 .tab-active {
   @apply bg-cst-blue text-white;
