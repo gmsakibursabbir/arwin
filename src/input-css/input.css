@@ -158,7 +158,11 @@ body {
 }
 .fc-toolbar-title {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+.fc .fc-toolbar-title {
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 .fc .fc-button {
   background: transparent;
@@ -174,7 +178,7 @@ body {
 }
 
 .fc .fc-daygrid-day-frame {
-  height: 64px;
+  height: 50px;
   align-items: center;
   align-self: center;
   display: flex;
@@ -186,6 +190,8 @@ body {
 }
 .fc-theme-standard th {
   height: 35px;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 .fc-scrollgrid-sync-inner {
   padding-top: 2px;
